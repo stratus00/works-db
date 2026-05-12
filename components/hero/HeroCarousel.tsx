@@ -34,7 +34,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="h-screen w-full relative overflow-hidden">
+    <div className="relative w-screen h-screen overflow-hidden">
       <AnimatePresence mode="sync">
         <motion.div
           key={index}

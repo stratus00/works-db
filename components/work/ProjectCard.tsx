@@ -13,11 +13,11 @@ export default function ProjectCard({ project, index }: Props) {
   return (
     <Link
       href={`/work/${project.slug}`}
-      className={`group cursor-pointer overflow-hidden block relative ${
+      className={`group cursor-pointer overflow-hidden block relative h-full ${
         isWide ? "md:col-span-2" : ""
       }`}
     >
-      <div className={`relative w-full overflow-hidden ${isWide ? "aspect-[16/7]" : "aspect-[4/3]"}`}>
+      <div className={`relative w-full overflow-hidden h-full ${isWide ? "min-h-[300px]" : "min-h-[400px]"}`}>
         <Image
           src={project.heroImage}
           alt={project.name}
