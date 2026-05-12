@@ -32,22 +32,25 @@ export default function ProjectGrid({
         <FilterBar activeFilter={activeFilter} onFilter={setActiveFilter} />
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12 items-stretch">
-        {filtered.map((project, i) => (
-          <motion.div
-            key={project.slug}
-            className="h-full"
-            initial={{ opacity: 0, y: 48 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{
-              duration: 0.65,
-              ease: [0.22, 1, 0.36, 1],
-              delay: (i % 2) * 0.12,
-            }}
-          >
-            <ProjectCard project={project} index={i} />
-          </motion.div>
-        ))}
+        {filtered.map((project, i) => {
+          const isLastAlone = filtered.length % 2 !== 0 && i === filtered.length - 1;
+          return (
+            <motion.div
+              key={project.slug}
+              className={`h-full${isLastAlone ? " md:col-span-2" : ""}`}
+              initial={{ opacity: 0, y: 48 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{
+                duration: 0.65,
+                ease: [0.22, 1, 0.36, 1],
+                delay: (i % 2) * 0.12,
+              }}
+            >
+              <ProjectCard project={project} index={i} />
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );
