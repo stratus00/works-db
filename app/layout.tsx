@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Cormorant_Garamond, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/nav/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -11,10 +11,10 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
 });
 
-const dmSans = DM_Sans({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-dm-sans",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
 });
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${dmSans.variable}`}
+      className={`${cormorant.variable} ${spaceGrotesk.variable}`}
     >
       <body className="bg-wdb-white text-wdb-black min-h-screen flex flex-col">
         <a

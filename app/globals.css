@@ -10,7 +10,13 @@
   --color-wdb-warm: #b8987a;
 
   --font-display: var(--font-cormorant);
-  --font-ui: var(--font-dm-sans);
+  --font-ui: var(--font-space-grotesk);
+}
+
+/* Override @theme font vars — Turbopack resolves var() in @theme at build time */
+:root {
+  --font-display: var(--font-cormorant);
+  --font-ui: var(--font-space-grotesk);
 }
 
 html,
