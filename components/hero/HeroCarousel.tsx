@@ -62,7 +62,7 @@ export default function HeroCarousel() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute bottom-16 left-8 md:left-12"
+        className="absolute bottom-24 left-8 md:left-12"
       >
         <HeroLogo />
         <p className="font-ui text-sm md:text-xl tracking-wide text-white/90 mt-4 font-normal">

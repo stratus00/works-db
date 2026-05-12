@@ -17,7 +17,7 @@ export default function ScrollCue() {
   return (
     <div
       aria-hidden="true"
-      className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-500 ${
+      className={`absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-500 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
