@@ -33,7 +33,7 @@ export default function HeroLogo() {
           {expanded ? (
             <motion.span
               key="long"
-              className="block whitespace-nowrap font-ui text-5xl md:text-7xl font-medium text-white tracking-tight"
+              className="block whitespace-nowrap font-ui text-5xl md:text-7xl font-medium text-white tracking-tight pb-3"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.2 } }}
@@ -44,7 +44,7 @@ export default function HeroLogo() {
           ) : (
             <motion.span
               key="short"
-              className="block whitespace-nowrap font-ui text-5xl md:text-7xl font-medium text-white tracking-tight"
+              className="block whitespace-nowrap font-ui text-5xl md:text-7xl font-medium text-white tracking-tight pb-3"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.2 } }}

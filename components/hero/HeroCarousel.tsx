@@ -65,7 +65,7 @@ export default function HeroCarousel() {
         className="absolute bottom-24 left-8 md:left-12"
       >
         <HeroLogo />
-        <p className="font-ui text-sm md:text-xl tracking-wide text-white/90 mt-4 font-normal">
+        <p className="font-ui text-base md:text-2xl tracking-wide text-white/90 mt-4 font-normal">
           designed around life. built without compromise.
         </p>
       </motion.div>

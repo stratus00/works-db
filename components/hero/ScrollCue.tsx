@@ -17,7 +17,7 @@ export default function ScrollCue() {
   return (
     <div
       aria-hidden="true"
-      className={`absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-500 ${
+      className={`absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-500 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
@@ -25,7 +25,7 @@ export default function ScrollCue() {
         Scroll
       </span>
       <motion.div
-        className="w-px h-12 bg-white/60"
+        className="w-px h-6 bg-white/60"
         animate={{ y: [0, 16, 0], scaleY: [1, 1.1, 1] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       />
