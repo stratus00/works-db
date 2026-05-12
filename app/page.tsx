@@ -65,11 +65,11 @@ export default function HomePage() {
                 Design and build, under one roof.
               </h2>
             </RevealOnScroll>
-            <div className="md:grid md:grid-cols-3 mt-4 divide-x divide-wdb-gray-200">
+            <div className="md:grid md:grid-cols-3 gap-10 mt-4">
               {processTeaserPillars.map((pillar, i) => (
                 <RevealOnScroll key={pillar.name} delay={i * 0.1}>
-                  <div className="py-8 px-10 first:pl-0 last:pr-0">
-                    <span className="font-ui text-xl tracking-widest uppercase text-wdb-warm block pb-3 border-b border-wdb-warm/50 mb-5">
+                  <div className="bg-wdb-gray-100 border border-wdb-gray-200 rounded-lg p-8 hover:shadow-md transition-shadow duration-300">
+                    <span className="font-ui text-xl tracking-widest uppercase text-wdb-warm block mb-4">
                       {pillar.name}
                     </span>
                     <p className="font-ui text-base font-light leading-relaxed text-wdb-gray-600">

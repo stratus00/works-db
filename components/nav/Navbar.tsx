@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import { usePageBackground } from "@/lib/usePageBackground";
+import DarkModeToggle from "./DarkModeToggle";
 
 const navLinks = [
   { label: "Work", href: "/work" },
@@ -102,6 +103,10 @@ export default function Navbar() {
                 </Link>
               );
             })}
+          </div>
+
+          <div className="hidden md:flex items-center">
+            <DarkModeToggle />
           </div>
 
           <button
