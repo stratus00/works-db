@@ -72,22 +72,20 @@ export default function HeroCarousel() {
       </motion.div>
 
       {/* Arrow navigation — desktop only */}
-      <div className="hidden md:flex absolute right-8 bottom-16 items-center gap-4">
-        <button
-          onClick={() => advance(-1)}
-          aria-label="Previous image"
-          className="w-10 h-10 flex items-center justify-center border border-white/40 text-white/70 hover:border-white hover:text-white transition-colors duration-200"
-        >
-          ‹
-        </button>
-        <button
-          onClick={() => advance(1)}
-          aria-label="Next image"
-          className="w-10 h-10 flex items-center justify-center border border-white/40 text-white/70 hover:border-white hover:text-white transition-colors duration-200"
-        >
-          ›
-        </button>
-      </div>
+      <button
+        onClick={() => advance(-1)}
+        aria-label="Previous image"
+        className="hidden md:block absolute left-8 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-200 text-5xl font-light leading-none"
+      >
+        ‹
+      </button>
+      <button
+        onClick={() => advance(1)}
+        aria-label="Next image"
+        className="hidden md:block absolute right-8 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-200 text-5xl font-light leading-none"
+      >
+        ›
+      </button>
 
       <ScrollCue />
     </div>
