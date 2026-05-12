@@ -8,7 +8,7 @@ export default function ScrollCue() {
 
   useEffect(() => {
     const handler = () => {
-      setVisible(window.scrollY < window.innerHeight * 0.25);
+      setVisible(window.scrollY < window.innerHeight * 0.2);
     };
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
@@ -21,12 +21,12 @@ export default function ScrollCue() {
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      <span className="font-ui text-xs tracking-widest uppercase text-white/50">
+      <span className="font-ui text-sm tracking-widest uppercase text-white/70">
         Scroll
       </span>
       <motion.div
-        className="w-px h-8 bg-white/40"
-        animate={{ y: [0, 12, 0] }}
+        className="w-px h-12 bg-white/60"
+        animate={{ y: [0, 16, 0], scaleY: [1, 1.1, 1] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       />
     </div>

@@ -5,6 +5,7 @@ import TeamPreview from "@/components/home/TeamPreview";
 import HomeCTA from "@/components/home/HomeCTA";
 import RevealOnScroll from "@/components/layout/RevealOnScroll";
 import { firmStatement, processTeaserPillars } from "@/data/content";
+import { parallaxFade } from "@/lib/motion";
 
 function SectionLabel({ text }: { text: string }) {
   return (
@@ -20,64 +21,75 @@ export default function HomePage() {
       <HeroCarousel />
 
       {/* Selected Work */}
-      <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <RevealOnScroll>
-            <SectionLabel text="Selected Work" />
-          </RevealOnScroll>
-          <ProjectGrid featured showFilter={false} />
-        </div>
-      </section>
+      <RevealOnScroll variants={parallaxFade}>
+        <section className="py-24 md:py-32">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <RevealOnScroll>
+              <SectionLabel text="Selected Work" />
+            </RevealOnScroll>
+            <ProjectGrid featured showFilter={false} />
+          </div>
+        </section>
+      </RevealOnScroll>
 
       {/* Firm Statement */}
-      <section className="py-24 md:py-32 border-t border-wdb-gray-200">
-        <div className="max-w-3xl mx-auto px-6 md:px-12">
-          <RevealOnScroll>
+      <RevealOnScroll variants={parallaxFade}>
+        <section className="py-24 md:py-32 border-t border-wdb-gray-200">
+          <div className="max-w-3xl mx-auto px-6 md:px-12">
             <p className="font-display text-2xl md:text-3xl font-light leading-relaxed text-wdb-black">
               {firmStatement}
             </p>
-          </RevealOnScroll>
-        </div>
-      </section>
+          </div>
+        </section>
+      </RevealOnScroll>
 
       {/* Team Preview */}
-      <section className="py-24 md:py-32 border-t border-wdb-gray-200">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <RevealOnScroll>
-            <SectionLabel text="The Team" />
-          </RevealOnScroll>
-          <TeamPreview />
-        </div>
-      </section>
-
-      {/* Process Teaser */}
-      <section className="py-24 md:py-32 border-t border-wdb-gray-200">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <RevealOnScroll>
-            <SectionLabel text="How We Work" />
-          </RevealOnScroll>
-          <div className="md:grid md:grid-cols-3 gap-16 mt-12">
-            {processTeaserPillars.map((pillar, i) => (
-              <RevealOnScroll key={pillar.name} delay={i * 0.1}>
-                <span className="font-ui text-xs tracking-widest uppercase text-wdb-warm">
-                  {pillar.name}
-                </span>
-                <p className="font-ui text-base font-light leading-relaxed text-wdb-gray-600 mt-3">
-                  {pillar.description}
-                </p>
-              </RevealOnScroll>
-            ))}
+      <RevealOnScroll variants={parallaxFade}>
+        <section className="py-24 md:py-32 border-t border-wdb-gray-200">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <h2 className="font-display text-3xl md:text-4xl font-light mb-12">
+              The Team
+            </h2>
+            <TeamPreview />
           </div>
-          <RevealOnScroll delay={0.3}>
-            <Link
-              href="/process"
-              className="inline-block mt-12 font-ui text-sm text-wdb-black hover:text-wdb-warm transition-colors duration-200"
-            >
-              Our process →
-            </Link>
-          </RevealOnScroll>
-        </div>
-      </section>
+        </section>
+      </RevealOnScroll>
+
+      {/* How We Work */}
+      <RevealOnScroll variants={parallaxFade}>
+        <section className="py-24 md:py-32 border-t border-wdb-gray-200">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <RevealOnScroll>
+              <SectionLabel text="How We Work" />
+              <h2 className="font-display text-3xl md:text-4xl font-light mb-12">
+                Design and build, under one roof.
+              </h2>
+            </RevealOnScroll>
+            <div className="md:grid md:grid-cols-3 gap-10 mt-4">
+              {processTeaserPillars.map((pillar, i) => (
+                <RevealOnScroll key={pillar.name} delay={i * 0.1}>
+                  <div className="bg-wdb-gray-100 border border-wdb-gray-200 rounded-lg p-8 hover:shadow-md transition-shadow duration-300">
+                    <span className="font-ui text-xl tracking-widest uppercase text-wdb-warm block mb-4">
+                      {pillar.name}
+                    </span>
+                    <p className="font-ui text-base font-light leading-relaxed text-wdb-gray-600">
+                      {pillar.description}
+                    </p>
+                  </div>
+                </RevealOnScroll>
+              ))}
+            </div>
+            <RevealOnScroll delay={0.3}>
+              <Link
+                href="/process"
+                className="inline-block mt-12 font-ui text-sm text-wdb-black hover:text-wdb-warm transition-colors duration-200"
+              >
+                Learn more →
+              </Link>
+            </RevealOnScroll>
+          </div>
+        </section>
+      </RevealOnScroll>
 
       <HomeCTA />
     </>

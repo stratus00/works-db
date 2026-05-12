@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { projects } from "@/data/projects";
 import ScrollCue from "./ScrollCue";
 
@@ -12,13 +12,24 @@ const images = carouselProjects.map((p) => ({
   alt: p.name,
 }));
 
+const INTERVAL = 5000;
+const PAUSE_DURATION = 10000;
+
 export default function HeroCarousel() {
   const [index, setIndex] = useState(0);
+  const pauseUntil = useRef<number>(0);
+
+  const advance = useCallback((dir: 1 | -1) => {
+    pauseUntil.current = Date.now() + PAUSE_DURATION;
+    setIndex((i) => (i + dir + images.length) % images.length);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((i) => (i + 1) % images.length);
-    }, 5000);
+      if (Date.now() >= pauseUntil.current) {
+        setIndex((i) => (i + 1) % images.length);
+      }
+    }, INTERVAL);
     return () => clearInterval(interval);
   }, []);
 
@@ -59,6 +70,24 @@ export default function HeroCarousel() {
           Architecture · Design · Build
         </p>
       </motion.div>
+
+      {/* Arrow navigation — desktop only */}
+      <div className="hidden md:flex absolute right-8 bottom-16 items-center gap-4">
+        <button
+          onClick={() => advance(-1)}
+          aria-label="Previous image"
+          className="w-10 h-10 flex items-center justify-center border border-white/40 text-white/70 hover:border-white hover:text-white transition-colors duration-200"
+        >
+          ‹
+        </button>
+        <button
+          onClick={() => advance(1)}
+          aria-label="Next image"
+          className="w-10 h-10 flex items-center justify-center border border-white/40 text-white/70 hover:border-white hover:text-white transition-colors duration-200"
+        >
+          ›
+        </button>
+      </div>
 
       <ScrollCue />
     </div>

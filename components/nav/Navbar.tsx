@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
+import { usePageBackground } from "@/lib/usePageBackground";
 
 const navLinks = [
   { label: "Work", href: "/work" },
@@ -20,6 +21,7 @@ const workDropdown = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const pageBackground = usePageBackground();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [workOpen, setWorkOpen] = useState(false);
@@ -30,10 +32,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
-  const textColor = scrolled ? "text-wdb-black" : "text-white";
-  const bgClass = scrolled
-    ? "bg-wdb-white/95 backdrop-blur-sm shadow-sm"
-    : "bg-transparent";
+  const isLight = pageBackground === "light";
+  const textColor = isLight || scrolled ? "text-wdb-black" : "text-white";
+  const bgClass =
+    isLight || scrolled
+      ? "bg-wdb-white/95 backdrop-blur-sm shadow-sm"
+      : "bg-transparent";
 
   return (
     <>
@@ -45,7 +49,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
           <Link
             href="/"
-            className={`font-ui font-medium text-sm tracking-wide transition-colors duration-200 ${textColor}`}
+            className={`font-ui font-medium text-base tracking-wide transition-colors duration-200 ${textColor}`}
           >
             WORKS-db
           </Link>
@@ -62,7 +66,7 @@ export default function Navbar() {
                   >
                     <Link
                       href="/work"
-                      className={`font-ui font-light text-sm tracking-wide transition-colors duration-200 hover:text-wdb-warm ${
+                      className={`font-ui font-light text-base tracking-wide transition-colors duration-200 hover:text-wdb-warm ${
                         pathname.startsWith("/work") ? "text-wdb-warm" : textColor
                       }`}
                     >
@@ -89,7 +93,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-ui font-light text-sm tracking-wide transition-colors duration-200 hover:text-wdb-warm ${
+                  className={`font-ui font-light text-base tracking-wide transition-colors duration-200 hover:text-wdb-warm ${
                     isActive ? "text-wdb-warm" : textColor
                   }`}
                 >
