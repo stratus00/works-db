@@ -22,7 +22,7 @@ export default function PageHero({ image, title, subtitle, alt = "" }: Props) {
       <div className="absolute inset-0 bg-wdb-black/30" />
       {title && (
         <div className="absolute bottom-12 left-8 md:left-12">
-          <h1 className="font-display text-4xl md:text-6xl font-light text-white">
+          <h1 className="font-display text-4xl md:text-6xl font-normal text-white">
             {title}
           </h1>
           {subtitle && (

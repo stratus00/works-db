@@ -52,7 +52,7 @@ export default function Navbar() {
             href="/"
             className={`font-ui font-medium text-base tracking-wide transition-colors duration-200 ${textColor}`}
           >
-            WORKS-db
+            Works.db
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -67,7 +67,7 @@ export default function Navbar() {
                   >
                     <Link
                       href="/work"
-                      className={`font-ui font-light text-base tracking-wide transition-colors duration-200 hover:text-wdb-warm ${
+                      className={`font-ui font-normal text-base tracking-wide transition-colors duration-200 hover:text-wdb-warm ${
                         pathname.startsWith("/work") ? "text-wdb-warm" : textColor
                       }`}
                     >
@@ -94,7 +94,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-ui font-light text-base tracking-wide transition-colors duration-200 hover:text-wdb-warm ${
+                  className={`font-ui font-normal text-base tracking-wide transition-colors duration-200 hover:text-wdb-warm ${
                     isActive ? "text-wdb-warm" : textColor
                   }`}
                 >

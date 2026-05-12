@@ -4,6 +4,7 @@ import { projects } from "@/data/projects";
 import ProjectCard from "./ProjectCard";
 import FilterBar from "./FilterBar";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface Props {
   featured?: boolean;
@@ -32,7 +33,20 @@ export default function ProjectGrid({
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12 items-stretch">
         {filtered.map((project, i) => (
-          <ProjectCard key={project.slug} project={project} index={i} />
+          <motion.div
+            key={project.slug}
+            className="h-full"
+            initial={{ opacity: 0, y: 48 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{
+              duration: 0.65,
+              ease: [0.22, 1, 0.36, 1],
+              delay: (i % 2) * 0.12,
+            }}
+          >
+            <ProjectCard project={project} index={i} />
+          </motion.div>
         ))}
       </div>
     </div>

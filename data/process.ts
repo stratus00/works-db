@@ -8,7 +8,7 @@ export interface ProcessPhase {
 export const processIntro = {
   headline: "Design and build, under one roof.",
   body: [
-    `In the traditional model, an architect designs a building and hands the drawings to a contractor who builds it. The two parties negotiate, interpret, and sometimes work against each other. Details get value-engineered out. The design intent arrives on site diluted. At WORKS-db, we don't work that way.`,
+    `In the traditional model, an architect designs a building and hands the drawings to a contractor who builds it. The two parties negotiate, interpret, and sometimes work against each other. Details get value-engineered out. The design intent arrives on site diluted. At Works.db, we don't work that way.`,
     `As your design-build firm, we are responsible for both the drawings and the construction. One team, one contract, one point of accountability — from the first conversation to the day we hand you the keys.`,
   ],
 };

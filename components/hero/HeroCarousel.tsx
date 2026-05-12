@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
+import HeroLogo from "./HeroLogo";
 import { projects } from "@/data/projects";
 import ScrollCue from "./ScrollCue";
 
@@ -63,9 +64,7 @@ export default function HeroCarousel() {
         transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         className="absolute bottom-16 left-8 md:left-12"
       >
-        <p className="font-display text-5xl md:text-7xl font-light text-white tracking-tight">
-          WORKS-db
-        </p>
+        <HeroLogo />
         <p className="font-ui text-xs md:text-sm tracking-wide text-white/70 mt-3 italic">
           designed around life. built without compromise.
         </p>

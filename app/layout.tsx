@@ -7,20 +7,20 @@ import { siteMetadata } from "@/data/content";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-cormorant",
 });
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-dm-sans",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "WORKS-db",
-    template: "%s | WORKS-db",
+    default: "Works.db",
+    template: "%s | Works.db",
   },
   description: siteMetadata.description,
   openGraph: {

@@ -19,7 +19,7 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <p className="font-display text-2xl font-light text-wdb-black">
+      <p className="font-display text-2xl font-normal text-wdb-black">
         Thank you. We&apos;ll be in touch.
       </p>
     );
@@ -27,7 +27,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
-      <input type="hidden" name="_subject" value="New project inquiry — WORKS-db" />
+      <input type="hidden" name="_subject" value="New project inquiry — Works.db" />
 
       <div>
         <label htmlFor="name" className="block font-ui text-xs tracking-wider uppercase text-wdb-gray-400 mb-2">
@@ -38,7 +38,7 @@ export default function ContactForm() {
           name="name"
           type="text"
           required
-          className="w-full bg-transparent border-0 border-b border-wdb-gray-200 focus:border-wdb-black focus:outline-none font-ui text-base font-light text-wdb-black py-2 transition-colors duration-200"
+          className="w-full bg-transparent border-0 border-b border-wdb-gray-200 focus:border-wdb-black focus:outline-none font-ui text-base font-normal text-wdb-black py-2 transition-colors duration-200"
         />
       </div>
 
@@ -51,7 +51,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           required
-          className="w-full bg-transparent border-0 border-b border-wdb-gray-200 focus:border-wdb-black focus:outline-none font-ui text-base font-light text-wdb-black py-2 transition-colors duration-200"
+          className="w-full bg-transparent border-0 border-b border-wdb-gray-200 focus:border-wdb-black focus:outline-none font-ui text-base font-normal text-wdb-black py-2 transition-colors duration-200"
         />
       </div>
 
@@ -62,7 +62,7 @@ export default function ContactForm() {
         <select
           id="projectType"
           name="projectType"
-          className="w-full bg-transparent border-0 border-b border-wdb-gray-200 focus:border-wdb-black focus:outline-none font-ui text-base font-light text-wdb-black py-2 transition-colors duration-200 appearance-none"
+          className="w-full bg-transparent border-0 border-b border-wdb-gray-200 focus:border-wdb-black focus:outline-none font-ui text-base font-normal text-wdb-black py-2 transition-colors duration-200 appearance-none"
         >
           <option value="Residential">Residential</option>
           <option value="Commercial">Commercial</option>
@@ -80,7 +80,7 @@ export default function ContactForm() {
           name="message"
           rows={5}
           required
-          className="w-full bg-transparent border-0 border-b border-wdb-gray-200 focus:border-wdb-black focus:outline-none font-ui text-base font-light text-wdb-black py-2 transition-colors duration-200 resize-none"
+          className="w-full bg-transparent border-0 border-b border-wdb-gray-200 focus:border-wdb-black focus:outline-none font-ui text-base font-normal text-wdb-black py-2 transition-colors duration-200 resize-none"
         />
       </div>
 

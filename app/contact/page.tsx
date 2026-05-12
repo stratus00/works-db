@@ -20,7 +20,7 @@ export default function ContactPage() {
           <p className="font-ui text-xs tracking-widest uppercase text-wdb-gray-400 mb-8">
             Get in touch
           </p>
-          <p className="font-ui text-base font-light text-wdb-gray-600 mb-12">
+          <p className="font-ui text-base font-normal text-wdb-gray-600 mb-12">
             {contactInfo.formIntro}
           </p>
           <ContactForm />
@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div className="mt-12 md:mt-0 space-y-8">
           <div>
             <InfoLabel text="Address" />
-            <p className="font-ui text-base font-light text-wdb-black">
+            <p className="font-ui text-base font-normal text-wdb-black">
               {contactInfo.address}
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function ContactPage() {
             <InfoLabel text="Email" />
             <a
               href={`mailto:${contactInfo.email}`}
-              className="font-ui text-base font-light text-wdb-black hover:text-wdb-warm transition-colors duration-200"
+              className="font-ui text-base font-normal text-wdb-black hover:text-wdb-warm transition-colors duration-200"
             >
               {contactInfo.email}
             </a>
@@ -46,7 +46,7 @@ export default function ContactPage() {
             <InfoLabel text="Phone" />
             <a
               href={`tel:${contactInfo.phone}`}
-              className="font-ui text-base font-light text-wdb-black hover:text-wdb-warm transition-colors duration-200"
+              className="font-ui text-base font-normal text-wdb-black hover:text-wdb-warm transition-colors duration-200"
             >
               {contactInfo.phone}
             </a>
@@ -54,7 +54,7 @@ export default function ContactPage() {
           {contactInfo.instagram && (
             <div>
               <InfoLabel text="Instagram" />
-              <p className="font-ui text-base font-light text-wdb-black">
+              <p className="font-ui text-base font-normal text-wdb-black">
                 {contactInfo.instagram}
               </p>
             </div>

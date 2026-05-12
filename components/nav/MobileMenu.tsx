@@ -36,7 +36,7 @@ export default function MobileMenu({ open, onClose, links }: Props) {
             key={link.href}
             href={link.href}
             onClick={onClose}
-            className="font-display text-4xl font-light text-wdb-black hover:text-wdb-warm transition-colors duration-200"
+            className="font-display text-4xl font-normal text-wdb-black hover:text-wdb-warm transition-colors duration-200"
           >
             {link.label}
           </Link>

@@ -26,7 +26,7 @@ export const projects: Project[] = [
     role: "Construction Manager & Project Designer",
     description: [
       `Set on a steep ridge in the Blue Ridge Mountains of North Carolina, this house was designed to dissolve the boundary between interior and the sweeping mountain landscape beyond. Stacked stone walls anchor the building to the site while floor-to-ceiling glass opens every primary space to panoramic views.`,
-      `The project was completed in collaboration with GLUCK+, the New York-based architecture and design-build firm whose integrated model directly inspired the founding of WORKS-db. Sam served as construction manager and project designer throughout the build.`,
+      `The project was completed in collaboration with GLUCK+, the New York-based architecture and design-build firm whose integrated model directly inspired the founding of Works.db. Sam served as construction manager and project designer throughout the build.`,
     ],
     heroImage: "/images/projects/blue-ridge-house/hero.jpg",
     images: [
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     role: "Construction Manager & Project Manager",
     description: [
       `Currently under construction in Birmingham, this residence is organized around a central courtyard — an open-air room that anchors every wing of the house and brings light deep into the interior. The material palette draws from the Alabama landscape: board-formed concrete, warm terracotta, and local stone.`,
-      `WORKS-db is serving as construction manager and project manager in collaboration with GLUCK+. This project marks the firm's first built work in its home city.`,
+      `Works.db is serving as construction manager and project manager in collaboration with GLUCK+. This project marks the firm's first built work in its home city.`,
     ],
     heroImage: "/images/projects/birmingham-house/hero.jpg",
     images: [

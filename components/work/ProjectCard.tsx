@@ -27,7 +27,7 @@ export default function ProjectCard({ project, index }: Props) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-wdb-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         <div className="absolute bottom-0 left-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
-          <p className="font-display text-xl font-light text-white">
+          <p className="font-display text-xl font-normal text-white">
             {project.name}
           </p>
           <p className="font-ui text-xs tracking-widest uppercase text-white/70 mt-1">

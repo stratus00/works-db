@@ -19,7 +19,7 @@ export default function TeamPreview() {
                 sizes="192px"
               />
             </div>
-            <p className="font-display text-xl font-light text-wdb-black">
+            <p className="font-display text-xl font-normal text-wdb-black">
               {member.name}
             </p>
             <p className="font-ui text-xs tracking-widest uppercase text-wdb-warm mt-1">

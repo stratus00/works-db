@@ -23,7 +23,7 @@ export default function TeamMember({ member, reverse = false }: Props) {
         />
       </div>
       <div className="flex-1">
-        <h2 className="font-display text-3xl font-light text-wdb-black mb-1">
+        <h2 className="font-display text-3xl font-normal text-wdb-black mb-1">
           {member.name}
         </h2>
         <p className="font-ui text-xs tracking-widest uppercase text-wdb-warm mb-6">
@@ -32,7 +32,7 @@ export default function TeamMember({ member, reverse = false }: Props) {
         {member.bio.map((para, i) => (
           <p
             key={i}
-            className="font-ui text-base font-light leading-relaxed text-wdb-gray-600 mb-4"
+            className="font-ui text-base font-normal leading-relaxed text-wdb-gray-600 mb-4"
           >
             {para}
           </p>

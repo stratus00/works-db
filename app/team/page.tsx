@@ -16,7 +16,7 @@ export default function TeamPage() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="pt-24">
-          <h1 className="font-display text-4xl md:text-5xl font-light">
+          <h1 className="font-display text-4xl md:text-5xl font-normal">
             The team
           </h1>
         </div>
@@ -26,7 +26,7 @@ export default function TeamPage() {
         ))}
 
         <div className="mt-24 pt-16 border-t border-wdb-gray-200 max-w-2xl mx-auto text-center mb-32">
-          <p className="font-display text-xl md:text-2xl font-light leading-relaxed text-wdb-gray-600 italic">
+          <p className="font-display text-xl md:text-2xl font-normal leading-relaxed text-wdb-gray-600 italic">
             {teamValuesStatement}
           </p>
         </div>

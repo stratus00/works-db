@@ -52,7 +52,7 @@ export default async function ProjectPage({
           {project.description.map((para, i) => (
             <p
               key={i}
-              className="font-ui text-base font-light leading-relaxed text-wdb-gray-600 mb-6"
+              className="font-ui text-base font-normal leading-relaxed text-wdb-gray-600 mb-6"
             >
               {para}
             </p>
@@ -94,7 +94,7 @@ export default async function ProjectPage({
               <p className="font-ui text-xs tracking-widest uppercase text-white/60 mb-2">
                 Next project
               </p>
-              <p className="font-display text-2xl font-light text-white">
+              <p className="font-display text-2xl font-normal text-white">
                 {nextProject.name}
               </p>
             </div>

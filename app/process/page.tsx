@@ -14,13 +14,13 @@ export default function ProcessPage() {
       <div className="pt-40 max-w-7xl mx-auto px-6 md:px-12">
         <div className="max-w-2xl">
           <RevealOnScroll>
-            <h1 className="font-display text-4xl md:text-5xl font-light mb-12">
+            <h1 className="font-display text-4xl md:text-5xl font-normal mb-12">
               {processIntro.headline}
             </h1>
             {processIntro.body.map((para, i) => (
               <p
                 key={i}
-                className="font-ui text-base font-light leading-relaxed text-wdb-gray-600 mb-6"
+                className="font-ui text-base font-normal leading-relaxed text-wdb-gray-600 mb-6"
               >
                 {para}
               </p>
@@ -51,7 +51,7 @@ export default function ProcessPage() {
           </p>
           <div className="md:grid md:grid-cols-2 gap-x-16 gap-y-3 mt-8">
             {servicesList.map((service) => (
-              <p key={service} className="font-ui text-base font-light text-wdb-gray-600 flex items-center gap-3">
+              <p key={service} className="font-ui text-base font-normal text-wdb-gray-600 flex items-center gap-3">
                 <span className="text-wdb-warm">—</span>
                 {service}
               </p>
@@ -62,7 +62,7 @@ export default function ProcessPage() {
         {/* CTA */}
         <div className="mt-24 text-center mb-32">
           <RevealOnScroll>
-            <h2 className="font-display text-2xl font-light mb-6">
+            <h2 className="font-display text-2xl font-normal mb-6">
               Ready to start a project?
             </h2>
             <Link

@@ -36,7 +36,7 @@ export default function HomePage() {
       <RevealOnScroll variants={parallaxFade}>
         <section className="py-24 md:py-32 border-t border-wdb-gray-200">
           <div className="max-w-3xl mx-auto px-6 md:px-12">
-            <p className="font-display text-2xl md:text-3xl font-light leading-relaxed text-wdb-black">
+            <p className="font-display text-2xl md:text-3xl font-normal leading-relaxed text-wdb-black">
               {firmStatement}
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function HomePage() {
       <RevealOnScroll variants={parallaxFade}>
         <section className="py-24 md:py-32 border-t border-wdb-gray-200">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <h2 className="font-display text-3xl md:text-4xl font-light mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-normal mb-12">
               The Team
             </h2>
             <TeamPreview />
@@ -61,7 +61,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <RevealOnScroll>
               <SectionLabel text="How We Work" />
-              <h2 className="font-display text-3xl md:text-4xl font-light mb-12">
+              <h2 className="font-display text-3xl md:text-4xl font-normal mb-12">
                 Design and build, under one roof.
               </h2>
             </RevealOnScroll>
@@ -72,7 +72,7 @@ export default function HomePage() {
                     <span className="font-ui text-xl tracking-widest uppercase text-wdb-warm block mb-4">
                       {pillar.name}
                     </span>
-                    <p className="font-ui text-base font-light leading-relaxed text-wdb-gray-600">
+                    <p className="font-ui text-base font-normal leading-relaxed text-wdb-gray-600">
                       {pillar.description}
                     </p>
                   </div>
