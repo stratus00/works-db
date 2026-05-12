@@ -66,8 +66,8 @@ export default function HeroCarousel() {
         <p className="font-display text-5xl md:text-7xl font-light text-white tracking-tight">
           WORKS-db
         </p>
-        <p className="font-ui text-xs md:text-sm tracking-widest uppercase text-white/70 mt-3">
-          Architecture · Design · Build
+        <p className="font-ui text-xs md:text-sm tracking-wide text-white/70 mt-3 italic">
+          designed around life. built without compromise.
         </p>
       </motion.div>
 
